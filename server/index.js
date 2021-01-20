@@ -17,7 +17,7 @@ const connection = mysql.createConnection({
   port: 56625,
   user: "azure",
   password: "6#vWHD_$",
-  database: "323-activity",
+  database: "localdb",
 })
 
 connection.connect();
