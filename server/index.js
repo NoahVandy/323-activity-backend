@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const http = require('http');
 
 // const connection = mysql.createConnection({
 //   host: '127.0.0.1',
@@ -131,7 +132,4 @@ app.get('/api/get', (req, res) => {
   });
 })
 
-app.listen(3001, () => {
-  console.log("running on port 3001");
-});
-
+// app.listen(3001);
