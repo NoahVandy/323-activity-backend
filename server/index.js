@@ -132,8 +132,6 @@ app.get('/api/get', (req, res) => {
   });
 })
 
-// app.listen(3001, () => {
-//   console.log("running on port 3001");
-// });
-
-module.exports = app;
+app.listen(process.env.PORT || 3001, () => {
+  console.log("running on port: " + process.env.PORT ? process.env.PORT : '3001');
+});
