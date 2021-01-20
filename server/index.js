@@ -14,7 +14,7 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: "127.0.0.1",
-  port: 56625,
+  port: 52951,
   user: "azure",
   password: "6#vWHD_$",
   database: "localdb",
