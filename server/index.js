@@ -12,15 +12,15 @@ const mysql = require('mysql');
 //   database: '323-activity',
 // })
 
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
-  port: 52951,
-  user: "azure",
-  password: "6#vWHD_$",
-  database: "localdb",
-})
+// const connection = mysql.createConnection({
+//   host: "127.0.0.1",
+//   port: 52951,
+//   user: "azure",
+//   password: "6#vWHD_$",
+//   database: "localdb",
+// })
 
-connection.connect();
+// connection.connect();
 
 app.use(bodyParser.urlencoded({
   extended: true,
