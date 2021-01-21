@@ -26,4 +26,4 @@ jobs:
         app-name: '323-activity-backend'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_762baa128aa54921a2f8289b67fb27c6 }}
-        package: server.zip
+        package: .
