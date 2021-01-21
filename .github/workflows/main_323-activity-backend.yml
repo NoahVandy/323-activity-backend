@@ -24,7 +24,7 @@ jobs:
       run: |
         cd server
         npm install
-        npm start
+        npm build
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -32,4 +32,4 @@ jobs:
         app-name: '323-activity-backend'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_c3b463fe4e4849fcbd8647af8488b176 }}
-        package: .
+        package: server/build
