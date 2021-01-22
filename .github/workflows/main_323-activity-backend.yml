@@ -19,6 +19,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.14.1'
+        
+    - name: install node modules
+      run: |
+        cd server
+        npm install
+        npm run build --if-present
+        cd ../
+      working-directory: server
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -26,4 +34,4 @@ jobs:
         app-name: '323-activity-backend'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_762baa128aa54921a2f8289b67fb27c6 }}
-        package: server.zip
+        package: .
