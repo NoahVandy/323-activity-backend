@@ -22,10 +22,8 @@ jobs:
         
     - name: install node modules
       run: |
-        cd server
         npm install
         npm run build --if-present
-        cd ../
       working-directory: server
 
     - name: 'Deploy to Azure Web App'
