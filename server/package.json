@@ -2,19 +2,37 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev:start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev:start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ../server --out-dir 323-activity-backend/build --extensions \".ts,.tsx\" --source-maps inline"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-const-enum": "^1.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "webpack": "^5.16.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-syntax-typescript": "^7.12.1",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/runtime": "^7.2.0",
+    "typescript": "^3.2.2",
+    "webpack-cli": "^4.4.0"
   }
 }
